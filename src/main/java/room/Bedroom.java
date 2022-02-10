@@ -9,8 +9,8 @@ public class Bedroom extends Room {
     private int roomNumber;
     private RoomType roomType;
 
-    public Bedroom (Integer capacity, ArrayList<Guest> guest, Integer roomNumber, RoomType roomType){
-        super(capacity, guest);
+    public Bedroom (Integer capacity, ArrayList<Guest> guests, Integer roomNumber, RoomType roomType){
+        super(capacity, guests);
         this.roomNumber = roomNumber;
         this.roomType = roomType;
     }
@@ -22,4 +22,14 @@ public class Bedroom extends Room {
     public RoomType getRoomType() {
         return roomType;
     }
+
+    public int countGuests(){
+        return this.guests.size();
+    }
+
+    public void addGuestToRoom(Guest guest) {
+        this.guests.add(guest);
+
+    }
 }
+

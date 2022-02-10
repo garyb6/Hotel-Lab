@@ -7,11 +7,11 @@ import java.util.ArrayList;
 public abstract class Room {
 
     private int capacity;
-    private ArrayList<Guest> guest;
+    protected ArrayList<Guest> guests;
 
-    public Room(int capacity, ArrayList<Guest> guest) {
+    public Room(int capacity, ArrayList<Guest> guests) {
         this.capacity = capacity;
-        this.guest = new ArrayList<>();
+        this.guests = new ArrayList<>();
     }
 
     public int getCapacity() {
@@ -23,11 +23,11 @@ public abstract class Room {
     }
 
     public ArrayList<Guest> getGuest() {
-        return this.guest;
+        return this.guests;
     }
 
-    public void setGuest(ArrayList<Guest> guest) {
-        this.guest = guest;
+    public void setGuest(ArrayList<Guest> guests) {
+        this.guests = guests;
     }
 }
 

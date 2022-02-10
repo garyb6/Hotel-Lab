@@ -9,8 +9,8 @@ public class ConferenceRoom extends Room {
 
     private String name;
 
-    public ConferenceRoom (Integer capacity, ArrayList<Guest> guest, String name){
-        super(capacity, guest);
+    public ConferenceRoom (Integer capacity, ArrayList<Guest> guests, String name){
+        super(capacity, guests);
         this.name = name;
     }
 
