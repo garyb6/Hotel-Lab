@@ -9,10 +9,12 @@ public class ConferenceRoom extends Room {
 
     private String name;
 
-    public ConferenceRoom (Integer capacity, ArrayList<Guest> guest, Integer roomNumber, RoomType roomType){
+    public ConferenceRoom (Integer capacity, ArrayList<Guest> guest, String name){
         super(capacity, guest);
         this.name = name;
+    }
 
-
+    public String getName() {
+        return this.name;
     }
 }
