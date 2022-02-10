@@ -43,4 +43,9 @@ public class Hotel{
 
     }
 
+    public int checkOutGuest( Bedroom bedroom, Guest guest) {
+        bedroom.removeGuest(guest);
+        this.bedrooms.remove(bedroom);
+        return this.bedrooms.size();
+    }
 }
