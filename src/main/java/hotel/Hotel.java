@@ -4,14 +4,16 @@ import guest.Guest;
 import room.Bedroom;
 import room.ConferenceRoom;
 import java.util.ArrayList;
+import booking.Booking;
 
-public class Hotel{
+public class Hotel {
 
     private ArrayList<Bedroom> bedrooms;
     private ArrayList<ConferenceRoom> conferenceRooms;
     private Guest guests;
+    private Booking booking;
 
-    public Hotel (){
+    public Hotel() {
 //        super(name);
         this.bedrooms = new ArrayList<>();
         this.conferenceRooms = new ArrayList<>();
@@ -25,7 +27,7 @@ public class Hotel{
         return this.conferenceRooms.size();
     }
 
-    public void addBedroom(Bedroom bedroom){
+    public void addBedroom(Bedroom bedroom) {
         this.bedrooms.add(bedroom);
     }
 
@@ -33,19 +35,17 @@ public class Hotel{
         this.conferenceRooms.add(conferenceroom);
     }
 
-    public int checkInGuest(Bedroom bedroom, Guest guest){
-        //add guest to bedroom
-        //add bedroom to hotel bedrooms list
-//        bedrooms..add(guest);
+    public int checkInGuest(Bedroom bedroom, Guest guest) {
         bedroom.addGuestToRoom(guest);
         this.bedrooms.add(bedroom);
         return this.bedrooms.size();
 
     }
 
-    public int checkOutGuest( Bedroom bedroom, Guest guest) {
+    public int checkOutGuest(Bedroom bedroom, Guest guest) {
         bedroom.removeGuest(guest);
         this.bedrooms.remove(bedroom);
         return this.bedrooms.size();
     }
+
 }
