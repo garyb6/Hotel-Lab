@@ -1,12 +1,12 @@
-package room.availableroom;
+package room;
 
-import room.Room;
 import guest.Guest;
+
 import java.util.ArrayList;
 
 public class Bedroom extends Room {
 
-    private Integer roomNumber;
+    private int roomNumber;
     private RoomType roomType;
 
     public Bedroom (Integer capacity, ArrayList<Guest> guest, Integer roomNumber, RoomType roomType){
@@ -15,8 +15,8 @@ public class Bedroom extends Room {
         this.roomType = roomType;
     }
 
-    public Integer getRoomNumber() {
-        return roomNumber;
+    public int getRoomNumber() {
+        return this.roomNumber;
     }
 
     public RoomType getRoomType() {

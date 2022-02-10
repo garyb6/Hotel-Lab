@@ -6,15 +6,15 @@ import java.util.ArrayList;
 
 public abstract class Room {
 
-    private Integer capacity;
+    private int capacity;
     private ArrayList<Guest> guest;
 
-    public Room (Integer capacity, ArrayList<Guest> guest) {
+    public Room(int capacity, ArrayList<Guest> guest) {
         this.capacity = capacity;
-        this.guest = guest;
+        this.guest = new ArrayList<>();
     }
 
-    public Integer getCapacity() {
+    public int getCapacity() {
         return this.capacity;
     }
 

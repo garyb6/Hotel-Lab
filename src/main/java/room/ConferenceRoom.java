@@ -1,4 +1,4 @@
-package room.availableroom;
+package room;
 
 import room.Room;
 import guest.Guest;

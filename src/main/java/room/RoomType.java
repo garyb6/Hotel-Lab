@@ -1,4 +1,4 @@
-package room.availableroom;
+package room;
 
 public enum RoomType {
     SINGLE(1),

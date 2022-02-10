@@ -1,6 +1,6 @@
 import guest.Guest;
-import room.availableroom.Bedroom;
-import room.availableroom.ConferenceRoom;
+import room.Bedroom;
+import room.ConferenceRoom;
 import java.util.ArrayList;
 
 public class Hotel {
@@ -9,9 +9,14 @@ public class Hotel {
     private ArrayList<ConferenceRoom> conferenceRooms;
     private Guest guest;
 
-    public Hotel (ArrayList<Bedroom> bedrooms, ArrayList<ConferenceRoom> conferenceRooms, Guest guest){
+    public Hotel (Guest guest){
+        this.bedrooms = new ArrayList<>();
+        this.conferenceRooms = new ArrayList<>();
         this.guest = guest;
     }
+
+
+
 
 
 }
